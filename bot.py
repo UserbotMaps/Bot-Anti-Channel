@@ -127,7 +127,7 @@ async def cb_handler(bot, query):
             await query.message.reply_text(f"{mention} has been unbanned by {query.from_user.mention}")
             await query.message.edit_reply_markup(reply_markup=None)
 
-@JV_BOT.on_message(filters.command(["ban"]) & filters.group)
+@JV_BOT.on_message(filters.command(["apiban"]) & filters.group)
 async def cban_handler(bot, message):
     chat_id = message.chat.id
     user = await bot.get_chat_member(message.chat.id, message.from_user.id)
